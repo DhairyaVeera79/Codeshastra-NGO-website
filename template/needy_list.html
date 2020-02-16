@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Needy people registered</title>
+    </head>
+    <body>
+        {% for name in names %}
+            <br><a href="needyprofile/{{ name }}">{{ name }}</a>
+        {% endfor %}
+    </body>
+</html>

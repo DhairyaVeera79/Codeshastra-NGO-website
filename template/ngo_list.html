@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+	<title>donation to Care website</title>
+</head>
+<body style="background-color:darksalmon">
+	<img scr="care.jpg",alt="Care Website image",align="middle">
+	<h1>Welcome to Care Website </h1>
+
+	{% for ngo in ngos %}
+		<br><a href="ngoprofile/{{ ngo }}">{{ ngo }}</a>
+	{% endfor %}
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search NGO</title>
+  <link href="../static/search.css" rel="stylesheet">
+</head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Search NGO nearby</h1>
+        <h3>Search Location</h3>
+      </div>
+    </header>
+    <form action="" method="POST">
+    <div class="dd">
+    <select name="ngo">
+      {% for i in range(0, locs.__len__()) %}
+        <optgroup label="{{ locs[i] }}">
+        {% for non_g in ngos_lst[i] %}
+          <option value="{{ non_g }}">{{ non_g }}</option>
+        {% endfor %}
+        </optgroup> 
+      {% endfor %}
+    </select>
+    <input type="submit">
+    </div>
+    <br>
+  </form>
+  </body>
+</html>
